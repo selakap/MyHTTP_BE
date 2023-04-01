@@ -181,6 +181,7 @@ public class MyHttpsBackend {
         out.print("Content-Length: "+responseMessage.length()+"\r\n");
         out.print("Content-Type: application/json; charset=UTF-8\r\n");
         out.print("\r\n");
+        out.print("\r\n");
         out.print(responseMessage);
 
         out.flush();
