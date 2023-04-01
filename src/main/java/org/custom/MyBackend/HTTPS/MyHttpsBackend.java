@@ -88,8 +88,6 @@ public class MyHttpsBackend {
                 // response
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
                 sendResponse(out);
-                clientSocket.getInputStream().close();
-                clientSocket.close();
             }
 
 

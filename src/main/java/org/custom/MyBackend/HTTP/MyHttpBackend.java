@@ -83,9 +83,6 @@ public class MyHttpBackend {
                 // response
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
                 sendResponse(out);
-                clientSocket.getInputStream().close();
-                clientSocket.close();
-
 
             }
 
@@ -179,6 +176,7 @@ public class MyHttpBackend {
         out.print("HTTP/1.1 "+responseCode+"\r\n");
         out.print("Content-Length: "+responseMessage.length()+"\r\n");
         out.print("Content-Type: application/json; charset=UTF-8\r\n");
+        out.print("\r\n");
         out.print("\r\n");
         out.print(responseMessage);
 
